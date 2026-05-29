@@ -66,10 +66,10 @@
 | chapter-04-docker-images | ✅ 已完成 |
 | chapter-05-containers | ✅ 已完成 |
 | chapter-06-exploring-docker | ✅ 已完成 |
-| chapter-07-debugging | ⬜ 未开始 |
+| chapter-07-debugging | ✅ 已完成（选学） |
 | chapter-08-docker-compose | ⬜ 未开始 |
-| chapter-09-path-to-production | ⬜ 未开始 |
-| chapter-10-docker-at-scale | ⏭️ 跳过 |
+| chapter-09-path-to-production | ✅ 已完成（浅看） |
+| chapter-10-docker-at-scale | ✅ 已完成（跳过） |
 | chapter-11-advanced-topics | ⏭️ 跳过 |
 | chapter-12-expanding-landscape | ⏭️ 跳过 |
 | chapter-13-platform-design | ⏭️ 跳过 |
