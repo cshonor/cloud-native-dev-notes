@@ -63,9 +63,9 @@
 | chapter-01-introduction | 🔄 进行中 |
 | chapter-02-docker-landscape | 🔄 进行中 |
 | chapter-03-installing-docker | ✅ 已完成 |
-| chapter-04-docker-images | ⬜ 未开始 |
-| chapter-05-containers | ⬜ 未开始 |
-| chapter-06-exploring-docker | ⬜ 未开始 |
+| chapter-04-docker-images | ✅ 已完成 |
+| chapter-05-containers | ✅ 已完成 |
+| chapter-06-exploring-docker | ✅ 已完成 |
 | chapter-07-debugging | ⬜ 未开始 |
 | chapter-08-docker-compose | ⬜ 未开始 |
 | chapter-09-path-to-production | ⬜ 未开始 |
