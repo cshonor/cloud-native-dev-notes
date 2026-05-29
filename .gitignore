@@ -1,0 +1,26 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Secrets
+.env
+.env.*
+*.pem
+credentials.json
+
+# Build artifacts
+node_modules/
+dist/
+build/
+*.log
+
+# Kubernetes
+kubeconfig
