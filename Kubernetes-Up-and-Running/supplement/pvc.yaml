@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-app-data
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 5Gi
+  # storageClassName: standard   # 按集群实际 StorageClass 填写
+---
+# 在 Deployment 中挂载示例（containers.volumeMounts）：
+# volumeMounts:
+#   - name: data
+#     mountPath: /var/lib/myapp
+# volumes:
+#   - name: data
+#     persistentVolumeClaim:
+#       claimName: my-app-data

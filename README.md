@@ -17,5 +17,19 @@
 - 每个顶层文件夹 = 对应一本书
 - 每本书内按原书章节拆分学习笔记、实操代码、踩坑记录
 
-## 📖 学习顺序
-1. Docker → 2. Kubernetes → 3. Nginx → 4. GitHub Actions
+## 📖 学习顺序（形成完整交付链路）
+
+```
+Docker 打包镜像
+    ↓
+Kubernetes 部署与调试
+    ↓
+Nginx 反向代理 / Ingress 路由
+    ↓
+GitHub Actions 串联：代码 → 镜像 → K8s 自动发布
+```
+
+1. **Docker Up and Running** — 会写 Dockerfile、Compose，能推镜像
+2. **Kubernetes Up and Running** — 会写 YAML、Deployment/Service、kubectl 调试
+3. **NGINX Cookbook** — 反向代理、HTTPS、限流；理解 Ingress 底层逻辑
+4. **Learning GitHub Actions** — 测试 → 构建镜像 → 推送 → `kubectl` 更新 K8s
