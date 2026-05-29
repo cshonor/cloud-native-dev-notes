@@ -108,10 +108,10 @@ Docker 过关后 → 按下面顺序学，不必严格按书页码线性读
 | chapter-03-deploying-cluster | ✅ 已完成 |
 | chapter-04-kubectl | ✅ 已完成 |
 | chapter-05-pods | ✅ 已完成 |
-| chapter-06-labels-annotations | ⬜ 未开始 |
-| chapter-07-service-discovery | ⬜ 未开始 |
-| chapter-08-ingress | ⬜ 未开始 |
-| chapter-09-replicasets | ⬜ 未开始 |
+| chapter-06-labels-annotations | ✅ 已完成 |
+| chapter-07-service-discovery | ✅ 已完成 |
+| chapter-08-ingress | ✅ 已完成 |
+| chapter-09-replicasets | ✅ 已完成 |
 | chapter-10-deployments | ⬜ 未开始 |
 | chapter-11-daemonsets | ⬜ 未开始 |
 | chapter-12-jobs | ⬜ 未开始 |
