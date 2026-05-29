@@ -103,7 +103,7 @@ Docker 过关后 → 按下面顺序学，不必严格按书页码线性读
 
 | 章节文件夹 | 状态 |
 |------------|------|
-| chapter-01-introduction | ⬜ 未开始 |
+| chapter-01-introduction | ✅ 已完成 |
 | chapter-02-containers | ⬜ 未开始 |
 | chapter-03-deploying-cluster | ⬜ 未开始 |
 | chapter-04-kubectl | ⬜ 未开始 |
