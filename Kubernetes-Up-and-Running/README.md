@@ -107,7 +107,7 @@ Docker 过关后 → 按下面顺序学，不必严格按书页码线性读
 | chapter-02-containers | ⬜ 未开始 |
 | chapter-03-deploying-cluster | ⬜ 未开始 |
 | chapter-04-kubectl | ⬜ 未开始 |
-| chapter-05-pods | ⬜ 未开始 |
+| chapter-05-pods | ✅ 已完成 |
 | chapter-06-labels-annotations | ⬜ 未开始 |
 | chapter-07-service-discovery | ⬜ 未开始 |
 | chapter-08-ingress | ⬜ 未开始 |
