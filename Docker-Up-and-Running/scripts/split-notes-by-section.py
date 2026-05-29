@@ -176,7 +176,7 @@ def build_chapter_readme(chapter_dir: Path, chapter_title: str, hint: str, entri
     lines.append("|------|------|")
     for sid, slug, title in entries:
         fname = f"{sid}-{slug}.md"
-        lines.append(f"| {sid} | [{title}](sections/{fname}) |")
+        lines.append(f"| {sid} | [{title}]({fname}) |")
     lines.append("")
     lines.append("> 你粘贴某小节原文后，在对应文件中增补即可。")
     lines.append("")
@@ -196,11 +196,8 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
     chapter_title = chapter_title_from_preamble(preamble)
     hint = hint_from_preamble(preamble)
 
-    sections_dir = chapter_dir / "sections"
-    sections_dir.mkdir(exist_ok=True)
-
-    # clear old section files
-    for f in sections_dir.glob("*.md"):
+    out_dir = chapter_dir
+    for f in out_dir.glob("[0-9]*.md"):
         f.unlink()
 
     entries: list[tuple[str, str, str]] = []
@@ -211,7 +208,7 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
             title = slug.replace("-", " ")
             body = "* **待补充**\n  * > 请粘贴该小节原文，我将按统一格式拆解。"
             fname = f"{section_id}-{slug}.md"
-            write_section(sections_dir / fname, section_id, title, hint, body)
+            write_section(out_dir / fname, section_id, title, hint, body)
             entries.append((section_id, slug, title))
             continue
         if heading_key not in parsed:
@@ -219,7 +216,7 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
             title = slug.replace("-", " ")
             body = "* **待补充**\n  * > 请粘贴该小节原文，我将按统一格式拆解。"
             fname = f"{section_id}-{slug}.md"
-            write_section(sections_dir / fname, section_id, title, hint, body)
+            write_section(out_dir / fname, section_id, title, hint, body)
             entries.append((section_id, slug, title))
             continue
 
@@ -241,11 +238,11 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
                     chunk = parts.get(key, "")
                     full_body = (intro + "\n\n" + chunk).strip() if sid == "8.5.1" else chunk
                     fname = f"{sid}-{sslug}.md"
-                    write_section(sections_dir / fname, sid, stitle, hint, full_body)
+                    write_section(out_dir / fname, sid, stitle, hint, full_body)
                     entries.append((sid, sslug, stitle))
             else:
                 fname = f"{section_id}-{slug}.md"
-                write_section(sections_dir / fname, section_id, "管理配置", hint, body)
+                write_section(out_dir / fname, section_id, "管理配置", hint, body)
                 entries.append((section_id, slug, "管理配置"))
             continue
 
@@ -258,7 +255,7 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
             body = (eco + "\n\n" + summ).strip()
             title = "小结"
             fname = f"{section_id}-{slug}.md"
-            write_section(sections_dir / fname, section_id, title, hint, body)
+            write_section(out_dir / fname, section_id, title, hint, body)
             entries.append((section_id, slug, title))
             continue
 
@@ -272,13 +269,13 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
 
         title = heading_key.replace("8.1 ", "").replace("8.2 ", "").replace("8.3 ", "").replace("8.4 ", "").replace("8.6 ", "")
         fname = f"{section_id}-{slug}.md"
-        write_section(sections_dir / fname, section_id, title, hint, body)
+        write_section(out_dir / fname, section_id, title, hint, body)
         entries.append((section_id, slug, title))
 
     # Append 本章速记 to last section if exists
     if "本章速记" in parsed and chapter_name != "chapter-08-docker-compose":
         last = entries[-1]
-        last_file = sections_dir / f"{last[0]}-{last[1]}.md"
+        last_file = out_dir / f"{last[0]}-{last[1]}.md"
         if last_file.exists():
             content = last_file.read_text(encoding="utf-8")
             if "本章速记" not in content:
@@ -289,7 +286,7 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
 
     # ch08: merge 本章速记 into 8.6
     if chapter_name == "chapter-08-docker-compose" and "本章速记" in parsed:
-        f86 = sections_dir / "8.6-小结.md"
+        f86 = out_dir / "8.6-小结.md"
         if f86.exists():
             content = f86.read_text(encoding="utf-8")
             if "本章速记" not in content:
@@ -300,7 +297,7 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
 
     # ch07: merge 本章速记 into 7.8
     if chapter_name == "chapter-07-debugging" and "本章速记" in parsed:
-        f78 = sections_dir / "7.8-小结.md"
+        f78 = out_dir / "7.8-小结.md"
         if f78.exists():
             content = f78.read_text(encoding="utf-8")
             extra = parsed.get("接下来", "")
@@ -316,7 +313,7 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
     # Replace notes.md with pointer
     notes_path.write_text(
         f"# {chapter_title}\n\n"
-        f"本章已拆分为 **{len(entries)}** 个小节文件，见 [`sections/`](sections/) 或 [README.md](README.md)。\n",
+        f"本章已拆分为 **{len(entries)}** 个小节文件，见 [README.md](README.md)。\n",
         encoding="utf-8",
     )
 

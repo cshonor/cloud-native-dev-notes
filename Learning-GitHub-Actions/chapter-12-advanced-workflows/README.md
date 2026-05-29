@@ -6,9 +6,9 @@
 
 | 小节 | 文件 |
 |------|------|
-| 12.1 | [创建您自己的入门工作流 (Creating Your Own Starter Workflows)](sections/12.1-创建您自己的入门工作流.md) |
-| 12.2 | [可重用工作流 (Reusable Workflows)](sections/12.2-可重用工作流.md) |
-| 12.3 | [必选工作流 (Required Workflows)](sections/12.3-必选工作流.md) |
-| 12.4 | [结论 (Conclusion)](sections/12.4-结论.md) |
+| 12.1 | [创建您自己的入门工作流 (Creating Your Own Starter Workflows)](12.1-创建您自己的入门工作流.md) |
+| 12.2 | [可重用工作流 (Reusable Workflows)](12.2-可重用工作流.md) |
+| 12.3 | [必选工作流 (Required Workflows)](12.3-必选工作流.md) |
+| 12.4 | [结论 (Conclusion)](12.4-结论.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。

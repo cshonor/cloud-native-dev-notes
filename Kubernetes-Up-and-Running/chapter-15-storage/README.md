@@ -4,9 +4,9 @@
 
 | 小节 | 文件 |
 |------|------|
-| 15.1 | [导入外部服务 (Importing External Services)](sections/15.1-导入外部服务.md) |
-| 15.2 | [运行可靠的单例 (Running Reliable Singletons)](sections/15.2-运行可靠的单例.md) |
-| 15.3 | [使用StatefulSets进行Kubernetes原生存储 (Kubernetes-Native Storage with StatefulSets)](sections/15.3-使用statefulsets进行kubernetes原生存储.md) |
-| 15.4 | [总结 (Summary)](sections/15.4-总结.md) |
+| 15.1 | [导入外部服务 (Importing External Services)](15.1-导入外部服务.md) |
+| 15.2 | [运行可靠的单例 (Running Reliable Singletons)](15.2-运行可靠的单例.md) |
+| 15.3 | [使用StatefulSets进行Kubernetes原生存储 (Kubernetes-Native Storage with StatefulSets)](15.3-使用statefulsets进行kubernetes原生存储.md) |
+| 15.4 | [总结 (Summary)](15.4-总结.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。

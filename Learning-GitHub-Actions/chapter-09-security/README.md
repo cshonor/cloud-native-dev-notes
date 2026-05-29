@@ -6,9 +6,9 @@
 
 | 小节 | 文件 |
 |------|------|
-| 9.1 | [通过配置实现安全 (Security by Configuration)](sections/9.1-通过配置实现安全.md) |
-| 9.2 | [通过设计实现安全 (Security by Design)](sections/9.2-通过设计实现安全.md) |
-| 9.3 | [通过监控实现安全 (Security by Monitoring)](sections/9.3-通过监控实现安全.md) |
-| 9.4 | [结论 (Conclusion)](sections/9.4-结论.md) |
+| 9.1 | [通过配置实现安全 (Security by Configuration)](9.1-通过配置实现安全.md) |
+| 9.2 | [通过设计实现安全 (Security by Design)](9.2-通过设计实现安全.md) |
+| 9.3 | [通过监控实现安全 (Security by Monitoring)](9.3-通过监控实现安全.md) |
+| 9.4 | [结论 (Conclusion)](9.4-结论.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。

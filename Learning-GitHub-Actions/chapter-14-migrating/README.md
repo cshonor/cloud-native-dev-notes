@@ -6,9 +6,9 @@
 
 | 小节 | 文件 |
 |------|------|
-| 14.1 | [准备工作 (Prep)](sections/14.1-准备工作.md) |
-| 14.2 | [从各大主流 CI/CD 平台迁移的核心差异点](sections/14.2-从各大主流-ci-cd-平台迁移的核心差异点.md) |
-| 14.3 | [GitHub Actions Importer 自动化迁移工具](sections/14.3-github-actions-importer-自动化迁移工具.md) |
-| 14.4 | [结论 (Conclusion)](sections/14.4-结论.md) |
+| 14.1 | [准备工作 (Prep)](14.1-准备工作.md) |
+| 14.2 | [从各大主流 CI/CD 平台迁移的核心差异点](14.2-从各大主流-ci-cd-平台迁移的核心差异点.md) |
+| 14.3 | [GitHub Actions Importer 自动化迁移工具](14.3-github-actions-importer-自动化迁移工具.md) |
+| 14.4 | [结论 (Conclusion)](14.4-结论.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。

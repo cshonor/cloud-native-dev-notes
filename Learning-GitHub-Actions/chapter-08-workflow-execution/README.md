@@ -6,11 +6,11 @@
 
 | 小节 | 文件 |
 |------|------|
-| 8.1 | [从更改中进行高级触发 (Advanced Triggering from Changes)](sections/8.1-从更改中进行高级触发.md) |
-| 8.2 | [无更改触发工作流 (Triggering Workflows Without a Change)](sections/8.2-无更改触发工作流.md) |
-| 8.3 | [处理并发 (Dealing with Concurrency)](sections/8.3-处理并发.md) |
-| 8.4 | [使用矩阵运行工作流 (Running a Workflow with a Matrix)](sections/8.4-使用矩阵运行工作流.md) |
-| 8.5 | [工作流函数 (Workflow Functions)](sections/8.5-工作流函数.md) |
-| 8.6 | [结论 (Conclusion)](sections/8.6-结论.md) |
+| 8.1 | [从更改中进行高级触发 (Advanced Triggering from Changes)](8.1-从更改中进行高级触发.md) |
+| 8.2 | [无更改触发工作流 (Triggering Workflows Without a Change)](8.2-无更改触发工作流.md) |
+| 8.3 | [处理并发 (Dealing with Concurrency)](8.3-处理并发.md) |
+| 8.4 | [使用矩阵运行工作流 (Running a Workflow with a Matrix)](8.4-使用矩阵运行工作流.md) |
+| 8.5 | [工作流函数 (Workflow Functions)](8.5-工作流函数.md) |
+| 8.6 | [结论 (Conclusion)](8.6-结论.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。

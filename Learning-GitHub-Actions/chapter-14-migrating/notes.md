@@ -1,3 +1,3 @@
 # 第14章：迁移到 GitHub Actions (Migrating to GitHub Actions)
 
-本章已拆分为 **4** 个小节，见 [README.md](README.md) / [sections/](sections/)。
+本章各小节笔记与本文件**同级**，见 [README.md](README.md) 中的链接。

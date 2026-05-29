@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Split chapter notes.md into sections/{id}-{slug}.md (one file per ## heading)."""
+"""Split chapter notes.md into {id}-{slug}.md beside notes.md."""
 
 from __future__ import annotations
 
@@ -80,9 +80,9 @@ def build_readme(chapter_dir: Path, title: str, hint: str, entries: list[tuple[s
     lines.append("|------|------|")
     for sid, slug, stitle in entries:
         fname = f"{sid}-{slug}.md"
-        lines.append(f"| {sid} | [{stitle}](sections/{fname}) |")
+        lines.append(f"| {sid} | [{stitle}]({fname}) |")
     lines.append("")
-    lines.append("> 粘贴某小节原文后，只改对应 `sections/` 文件。")
+    lines.append("> 粘贴某小节原文后，只改对应小节 `.md` 文件。")
     lines.append("")
     (chapter_dir / "README.md").write_text("\n".join(lines), encoding="utf-8")
 
@@ -107,9 +107,8 @@ def process_chapter(chapter_dir: Path) -> int:
             continue
         content_sections.append((h, b))
 
-    sections_dir = chapter_dir / "sections"
-    sections_dir.mkdir(exist_ok=True)
-    for f in sections_dir.glob("*.md"):
+    out_dir = chapter_dir
+    for f in out_dir.glob("[0-9]*.md"):
         f.unlink()
 
     entries: list[tuple[str, str, str]] = []
@@ -120,11 +119,11 @@ def process_chapter(chapter_dir: Path) -> int:
         slug = make_slug(heading)
         stitle = display_title(heading)
         fname = f"{sid}-{slug}.md"
-        write_section(sections_dir / fname, sid, stitle, hint, body)
+        write_section(out_dir / fname, sid, stitle, hint, body)
         entries.append((sid, slug, stitle))
 
     if entries and cheji:
-        last_path = sections_dir / f"{entries[-1][0]}-{entries[-1][1]}.md"
+        last_path = out_dir / f"{entries[-1][0]}-{entries[-1][1]}.md"
         text = last_path.read_text(encoding="utf-8")
         if "本章速记" not in text:
             last_path.write_text(text.rstrip() + f"\n\n## 本章速记\n\n{cheji}\n", encoding="utf-8")
@@ -133,7 +132,7 @@ def process_chapter(chapter_dir: Path) -> int:
 
     notes.write_text(
         f"# {title}\n\n"
-        f"本章已拆分为 **{len(entries)}** 个小节，见 [README.md](README.md) / [sections/](sections/)。\n",
+        f"本章已拆分为 **{len(entries)}** 个小节，见 [README.md](README.md)。\n",
         encoding="utf-8",
     )
     return len(entries)

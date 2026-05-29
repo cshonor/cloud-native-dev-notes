@@ -1,3 +1,3 @@
 # 第4章 使用 Docker 映像 (Working with Docker Images)
 
-本章已拆分为 **9** 个小节文件，见 [`sections/`](sections/) 或 [README.md](README.md)。
+本章各小节笔记与本文件**同级**，见 [README.md](README.md) 中的链接。

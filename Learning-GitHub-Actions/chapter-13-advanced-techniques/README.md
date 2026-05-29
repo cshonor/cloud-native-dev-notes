@@ -6,9 +6,9 @@
 
 | 小节 | 文件 |
 |------|------|
-| 13.1 | [在工作流中驱动 GitHub (Driving GitHub from Your Workflow)](sections/13.1-在工作流中驱动-github.md) |
-| 13.2 | [使用矩阵策略自动创建作业 (Using a Matrix Strategy to Automatically Create Jobs)](sections/13.2-使用矩阵策略自动创建作业.md) |
-| 13.3 | [在工作流中使用容器 (Using Containers in Your Workflow)](sections/13.3-在工作流中使用容器.md) |
-| 13.4 | [结论 (Conclusion)](sections/13.4-结论.md) |
+| 13.1 | [在工作流中驱动 GitHub (Driving GitHub from Your Workflow)](13.1-在工作流中驱动-github.md) |
+| 13.2 | [使用矩阵策略自动创建作业 (Using a Matrix Strategy to Automatically Create Jobs)](13.2-使用矩阵策略自动创建作业.md) |
+| 13.3 | [在工作流中使用容器 (Using Containers in Your Workflow)](13.3-在工作流中使用容器.md) |
+| 13.4 | [结论 (Conclusion)](13.4-结论.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。

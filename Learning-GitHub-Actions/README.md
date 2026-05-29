@@ -52,12 +52,12 @@
 ```
 chapter-04-working-with-workflows/
   README.md
-  sections/
-    4.1-在存储库中创建第一个工作流.md
-    ...
+  notes.md
+  4.1-在存储库中创建第一个工作流.md
+  ...
 ```
 
-- 每个 `##` 小节一个文件；发原文只改对应 `sections/` 文件。
+- 每个小节一个 `.md` 文件，与 `notes.md` **同级**。
 
 ---
 

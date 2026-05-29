@@ -6,11 +6,11 @@
 
 | 小节 | 文件 |
 |------|------|
-| 11.1 | [操作的剖析 (Anatomy of an action)](sections/11.1-操作的剖析.md) |
-| 11.2 | [操作的类型 (Types of Actions)](sections/11.2-操作的类型.md) |
-| 11.3 | [完成您的操作创建 (Completing Your Action Creation)](sections/11.3-完成您的操作创建.md) |
-| 11.4 | [在 GitHub Marketplace 上发布操作 (Publishing Actions on the GitHub Marketplace)](sections/11.4-在-github-marketplace-上发布操作.md) |
-| 11.5 | [Actions 工具包 (The Actions Toolkit)](sections/11.5-actions-工具包.md) |
-| 11.6 | [本地操作 (Local actions)](sections/11.6-本地操作.md) |
+| 11.1 | [操作的剖析 (Anatomy of an action)](11.1-操作的剖析.md) |
+| 11.2 | [操作的类型 (Types of Actions)](11.2-操作的类型.md) |
+| 11.3 | [完成您的操作创建 (Completing Your Action Creation)](11.3-完成您的操作创建.md) |
+| 11.4 | [在 GitHub Marketplace 上发布操作 (Publishing Actions on the GitHub Marketplace)](11.4-在-github-marketplace-上发布操作.md) |
+| 11.5 | [Actions 工具包 (The Actions Toolkit)](11.5-actions-工具包.md) |
+| 11.6 | [本地操作 (Local actions)](11.6-本地操作.md) |
 
-> 粘贴某小节原文后，只改对应 `sections/` 文件。
+> 粘贴某小节原文后，只改对应 本章目录下对应小节文件 文件。
