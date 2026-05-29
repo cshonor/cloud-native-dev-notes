@@ -106,8 +106,8 @@
 | 章节文件夹 | 状态 |
 |------------|------|
 | chapter-01-basics | ⬜ 未开始 |
-| chapter-02-load-balancing | ⬜ 未开始 |
-| chapter-03-traffic-management | ⬜ 未开始 |
+| chapter-02-load-balancing | ✅ 已完成（选学） |
+| chapter-03-traffic-management | ✅ 已完成 |
 | chapter-04-caching | ⬜ 未开始 |
 | chapter-05-programmability | ⏭️ 跳过 |
 | chapter-06-authentication | ⏭️ 跳过 |
