@@ -1,3 +1,6 @@
+# Legacy nested folder (pending manual delete)
+cloud-native-dev-notes/
+
 # OS
 .DS_Store
 Thumbs.db
