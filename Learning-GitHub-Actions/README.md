@@ -131,7 +131,7 @@ Ch 01～04（概念+写 YAML）→ Ch 06+09（Secrets）→ Ch 10（调试）
 | chapter-06-workflow-environments | 🔄 进行中 |
 | chapter-07-managing-data | 🔄 进行中 |
 | chapter-08-workflow-execution | 🔄 进行中（选学） |
-| chapter-09-security | ⬜ 未开始 |
+| chapter-09-security | 🔄 进行中 |
 | chapter-10-monitoring-debugging | ⬜ 未开始 |
 | chapter-11-custom-actions | ⏭️ 跳过 |
 | chapter-12-advanced-workflows | ⏭️ 跳过 |
