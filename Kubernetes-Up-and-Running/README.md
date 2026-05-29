@@ -113,8 +113,8 @@ Docker 过关后 → 按下面顺序学，不必严格按书页码线性读
 | chapter-08-ingress | ✅ 已完成 |
 | chapter-09-replicasets | ✅ 已完成 |
 | chapter-10-deployments | ✅ 已完成 |
-| chapter-11-daemonsets | ⬜ 未开始 |
-| chapter-12-jobs | ⬜ 未开始 |
+| chapter-11-daemonsets | ✅ 已完成 |
+| chapter-12-jobs | ✅ 已完成 |
 | chapter-13-configmaps-secrets | ⬜ 未开始 |
 | chapter-14-rbac | ⬜ 未开始 |
 | chapter-15-storage | ⬜ 未开始 |
