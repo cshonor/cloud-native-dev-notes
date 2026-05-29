@@ -123,13 +123,13 @@ Ch 01～04（概念+写 YAML）→ Ch 06+09（Secrets）→ Ch 10（调试）
 
 | 章节文件夹 | 状态 |
 |------------|------|
-| chapter-01-the-basics | ⬜ 未开始 |
-| chapter-02-how-actions-work | ⬜ 未开始 |
+| chapter-01-the-basics | 🔄 进行中 |
+| chapter-02-how-actions-work | 🔄 进行中 |
 | chapter-03-whats-in-an-action | ⬜ 未开始 |
 | chapter-04-working-with-workflows | ⬜ 未开始 |
 | chapter-05-runners | ⬜ 未开始 |
-| chapter-06-workflow-environments | ⬜ 未开始 |
-| chapter-07-managing-data | ⬜ 未开始 |
+| chapter-06-workflow-environments | 🔄 进行中 |
+| chapter-07-managing-data | 🔄 进行中 |
 | chapter-08-workflow-execution | ⬜ 未开始 |
 | chapter-09-security | ⬜ 未开始 |
 | chapter-10-monitoring-debugging | ⬜ 未开始 |
