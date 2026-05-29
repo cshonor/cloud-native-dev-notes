@@ -44,7 +44,7 @@ CHAPTER_MAP: dict[str, list[tuple[str, str, str]]] = {
         ("4.9", "小结", "本章速记"),
     ],
     "chapter-05-containers": [
-        ("5.1", "容器是什么", "容器是什么"),
+        ("5.1", "容器是什么", "容器是什么？"),
         ("5.2", "创建容器", "创建容器"),
         ("5.3", "启动容器", "启动容器"),
         ("5.4", "自动重启", "自动重启容器"),
@@ -80,12 +80,12 @@ CHAPTER_MAP: dict[str, list[tuple[str, str, str]]] = {
         ("7.8", "小结", "接下来"),
     ],
     "chapter-08-docker-compose": [
-        ("8.1", "配置docker-compose", "8.1 配置 Docker Compose"),
-        ("8.2", "启动服务", "8.2 启动服务"),
-        ("8.3", "探索rocketchat", "8.3 探索 Rocket.Chat"),
-        ("8.4", "compose命令", "8.4 Docker Compose 命令"),
-        ("8.5.1", "默认值", "8.5 管理配置"),
-        ("8.6", "小结", "8.6 小结"),
+        ("8.1", "配置docker-compose", "__merge_compose_intro_config__"),
+        ("8.2", "启动服务", "启动服务"),
+        ("8.3", "健康检查", "健康检查（Health Check）"),
+        ("8.4", "compose命令", "Docker Compose 命令"),
+        ("8.5.1", "默认值", "管理配置"),
+        ("8.6", "小结", "小结"),
     ],
     "chapter-09-path-to-production": [
         ("9.1", "部署", "部署"),
@@ -107,7 +107,7 @@ CHAPTER_MAP: dict[str, list[tuple[str, str, str]]] = {
         ("11.5", "nsenter", None),
         ("11.6", "docker结构", None),
         ("11.7", "替换运行时", None),
-        ("11.8", "小结", "网络"),
+        ("11.8", "小结", "网络"),  # 书中末节标题为「网络」，文件仍用 11.8-小结
     ],
 }
 
@@ -128,17 +128,23 @@ def parse_sections(text: str) -> dict[str, str]:
 
 def split_8_5(content: str) -> dict[str, str]:
     """Split 8.5 into 8.5.1, 8.5.2, 8.5.3."""
-    out: dict[str, str] = {}
-    intro, _, rest = content.partition("### 8.5.1 默认值")
-    if rest:
-        p1, _, rest2 = rest.partition("### 8.5.2 强制值")
-        p2, _, p3 = rest2.partition("### 8.5.3 dotenv 文件（.env）")
-        out["8.5-intro"] = intro.strip()
-        out["8.5.1"] = p1.strip()
-        out["8.5.2"] = p2.strip()
-        out["8.5.3"] = p3.strip()
-    else:
-        out["8.5-full"] = content
+    patterns = [
+        ("8.5.1", re.compile(r"^### (?:8\.5\.1 默认值|默认值).*$", re.M)),
+        ("8.5.2", re.compile(r"^### (?:8\.5\.2 强制值|强制值).*$", re.M)),
+        ("8.5.3", re.compile(r"^### (?:8\.5\.3 dotenv.*|\.env 文件).*$", re.M)),
+    ]
+    hits: list[tuple[int, str, int]] = []
+    for key, pat in patterns:
+        m = pat.search(content)
+        if m:
+            hits.append((m.start(), key, m.end()))
+    if len(hits) < 3:
+        return {"8.5-full": content}
+    hits.sort()
+    out: dict[str, str] = {"8.5-intro": content[: hits[0][0]].strip()}
+    for i, (_, key, end) in enumerate(hits):
+        next_start = hits[i + 1][0] if i + 1 < len(hits) else len(content)
+        out[key] = content[end:next_start].strip()
     return out
 
 
@@ -204,13 +210,34 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
     used_headings: set[str] = set()
 
     for section_id, slug, heading_key in mapping:
-        if heading_key is None or heading_key.startswith("__"):
+        if heading_key is None:
             title = slug.replace("-", " ")
             body = "* **待补充**\n  * > 请粘贴该小节原文，我将按统一格式拆解。"
             fname = f"{section_id}-{slug}.md"
             write_section(out_dir / fname, section_id, title, hint, body)
             entries.append((section_id, slug, title))
             continue
+
+        if heading_key == "__merge_ecosystem_summary__":
+            eco = parsed.get("Docker 的生态系统", "")
+            summ = parsed.get("小结", "")
+            body = (eco + "\n\n" + summ).strip()
+            title = "小结"
+            fname = f"{section_id}-{slug}.md"
+            write_section(out_dir / fname, section_id, title, hint, body)
+            entries.append((section_id, slug, title))
+            continue
+
+        if heading_key == "__merge_compose_intro_config__":
+            intro = parsed.get("Docker Compose 简介", "")
+            config = parsed.get("编写 compose.yml（配置 Docker Compose）", "")
+            body = (intro + "\n\n---\n\n" + config).strip()
+            title = "配置 Docker Compose"
+            fname = f"{section_id}-{slug}.md"
+            write_section(out_dir / fname, section_id, title, hint, body)
+            entries.append((section_id, slug, title))
+            continue
+
         if heading_key not in parsed:
             # placeholder
             title = slug.replace("-", " ")
@@ -249,16 +276,6 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
         if chapter_name == "chapter-08-docker-compose" and section_id.startswith("8.5.") and section_id != "8.5.1":
             continue
 
-        if heading_key == "__merge_ecosystem_summary__":
-            eco = parsed.get("Docker 的生态系统", "")
-            summ = parsed.get("小结", "")
-            body = (eco + "\n\n" + summ).strip()
-            title = "小结"
-            fname = f"{section_id}-{slug}.md"
-            write_section(out_dir / fname, section_id, title, hint, body)
-            entries.append((section_id, slug, title))
-            continue
-
         if chapter_name == "chapter-10-docker-at-scale" and section_id == "10.1":
             extra = parsed.get("章节核心主旨与背景", "")
             centurion = parsed.get("Centurion", "")
@@ -268,6 +285,8 @@ def process_chapter(chapter_name: str, mapping: list[tuple[str, str, str]]) -> N
                 body += "\n\n---\n\n## 附录：Centurion（旧版笔记）\n\n" + centurion
 
         title = heading_key.replace("8.1 ", "").replace("8.2 ", "").replace("8.3 ", "").replace("8.4 ", "").replace("8.6 ", "")
+        if chapter_name == "chapter-11-advanced-topics" and section_id == "11.8":
+            title = "小结"
         fname = f"{section_id}-{slug}.md"
         write_section(out_dir / fname, section_id, title, hint, body)
         entries.append((section_id, slug, title))

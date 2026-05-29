@@ -1,17 +1,19 @@
-# 第8章 探索 Docker Compose (Exploring Docker Compose)
+# 第8章 Docker Compose（第三版 · 课外必补）
 
-> **第三版目录**：8.1 配置 · 8.2 启动 · 8.3 Rocket.Chat · 8.4 命令 · 8.5 管理配置 · 8.6 小结  
-> **后端学习提示**：本章 **必学 ⭐⭐⭐**。命令统一 **`docker compose`**（V2，无横杠）。
+> **来源说明**：你手上的 **12 章版本无 Compose 专章**；以下内容来自 **《Docker 即学即用》第三版** 结构（Ch 3 配置与启动 + Ch 8.4 命令 + Ch 8.5 配置管理），与仓库 `chapter-01`～`chapter-11` 笔记对齐。  
+> **后端学习提示**：本章 **必学 ⭐⭐⭐**。本地开发标配：PG + pgvector / TimescaleDB + 后端 API 一键拉起；命令统一用 **`docker compose`**（V2，无横杠）。生产多机编排交给 K8s，Compose 仅用于本机/单机集成测试。
 
-## 小节笔记（与 notes.md 同级）
+## 小节笔记（一书一小节一文件）
 
 | 小节 | 文件 |
 |------|------|
 | 8.1 | [配置 Docker Compose](8.1-配置docker-compose.md) |
 | 8.2 | [启动服务](8.2-启动服务.md) |
-| 8.3 | [探索 Rocket.Chat](8.3-探索rocketchat.md) |
-| 8.4 | [Compose 命令](8.4-compose命令.md) |
+| 8.3 | [健康检查（Health Check）](8.3-健康检查.md) |
+| 8.4 | [Docker Compose 命令](8.4-compose命令.md) |
 | 8.5.1 | [默认值](8.5.1-默认值.md) |
+| 8.5.2 | [强制值](8.5.2-强制值.md) |
+| 8.5.3 | [dotenv 文件](8.5.3-dotenv文件.md) |
 | 8.6 | [小结](8.6-小结.md) |
 
-> 粘贴某小节原文后，只改对应 `.md` 文件。速查见 [`../supplement/compose-v2.md`](../supplement/compose-v2.md)。
+> 你粘贴某小节原文后，在对应文件中增补即可。
