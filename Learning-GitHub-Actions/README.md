@@ -133,9 +133,9 @@ Ch 01～04（概念+写 YAML）→ Ch 06+09（Secrets）→ Ch 10（调试）
 | chapter-08-workflow-execution | 🔄 进行中（选学） |
 | chapter-09-security | 🔄 进行中 |
 | chapter-10-monitoring-debugging | 🔄 进行中 |
-| chapter-11-custom-actions | ⏭️ 跳过 |
+| chapter-11-custom-actions | 🔄 进行中（选学，Marketplace 跳过） |
 | chapter-12-advanced-workflows | 🔄 进行中（组织级，后端跳过） |
-| chapter-13-advanced-techniques | ⬜ 未开始 |
+| chapter-13-advanced-techniques | 🔄 进行中（选学） |
 | chapter-14-migrating | ⏭️ 跳过 |
 
 > 状态：⬜ 未开始 / 🔄 进行中 / ✅ 已完成 / ⏭️ 跳过
