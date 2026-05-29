@@ -1,6 +1,6 @@
-# Docker Compose V2 补漏（书中无专章）
+# Docker Compose V2 速查
 
-《Docker 即学即用》**没有独立 Compose 章节**。多容器编排（PG + 应用 + 插件）必须单独学习当前主流的 **Compose V2**。
+第三版 **第 8 章** 完整笔记见 [`chapter-08-docker-compose/notes.md`](../chapter-08-docker-compose/notes.md)。
 
 - 官方文档：[Docker Compose](https://docs.docker.com/compose/)
 - 命令形式：`docker compose`（**无短横线**，Compose 作为 Docker CLI 插件）
