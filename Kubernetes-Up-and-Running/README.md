@@ -115,11 +115,11 @@ Docker 过关后 → 按下面顺序学，不必严格按书页码线性读
 | chapter-10-deployments | ✅ 已完成 |
 | chapter-11-daemonsets | ✅ 已完成 |
 | chapter-12-jobs | ✅ 已完成 |
-| chapter-13-configmaps-secrets | ⬜ 未开始 |
-| chapter-14-rbac | ⬜ 未开始 |
-| chapter-15-storage | ⬜ 未开始 |
-| chapter-16-extending-k8s | ⏭️ 跳过 |
-| chapter-17-real-world-apps | ⬜ 未开始 |
-| chapter-18-organizing-app | ⬜ 未开始 |
+| chapter-13-configmaps-secrets | ✅ 已完成 |
+| chapter-14-rbac | ✅ 已完成 |
+| chapter-15-storage | ✅ 已完成 |
+| chapter-16-extending-k8s | ✅ 已完成（后端了解） |
+| chapter-17-real-world-apps | ✅ 已完成 |
+| chapter-18-organizing-app | ✅ 已完成 |
 
 > 状态：⬜ 未开始 / 🔄 进行中 / ✅ 已完成 / ⏭️ 跳过
